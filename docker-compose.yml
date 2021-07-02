@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  mysql:
+    image: mysql:8
+    container_name: my_sql
+    restart: always
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: confidentail
+      MYSQL_DATABASE: demo
+networks:
+  default:
+    name: my_sql
